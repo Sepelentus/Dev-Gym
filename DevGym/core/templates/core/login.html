@@ -3,5 +3,23 @@
 {% load static %}
 
 {% block content %}
-    
+<div class='bold-line'></div>
+<div class='container-css'>
+  <div class='window'>
+    <div class='overlay'></div>
+    <div class='content'>
+      <div class='welcome'>Hola!</div>
+      <div class='subtitle'>Porfavor ingrese con su cuenta usm.</div>
+      <div class='input-fields'>
+        <input type='email' placeholder='Email' class='input-line full-width'></input>
+        <input type='password' placeholder='Password' class='input-line full-width'></input>
+      </div>
+      <div>
+        <a href="{% url 'reserve' %}">
+            <button class='ghost-round full-width'>Iniciar sesion</button>
+        </a>
+    </div>
+    </div>
+  </div>
+</div>
 {% endblock content %}

@@ -1,0 +1,42 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<nav class="navbar navbar-expand-sm navbar-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'homepage' %}">
+            <img src="{% static 'core/img/devgym-logo.png'%}" alt="logo" style="height: 70px; width: 70px; margin-left: 20px; margin-right: 20px;">
+        </a>
+        <div class="row">
+        <div class="col-lg-10 col-sm-8"></div>
+        <div class="col-lg-2 col-sm-4">
+        <a class="btn btn-primary btn-sm " href="{% url 'homepage' %}" role="button"> Salir </a>
+        </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6"> 
+            <div class="calendar"></div>
+        </div>
+        <div class="col-lg-2"></div>
+        <div class="col-lg-4" style="text-align: center;">
+            <h2> Horas disponibles: </h2>
+            <div class="col-4" style="margin-top: 15px;"> <h3> 12:15 </h3> </div> <div class="col-2"></div> <div class="col-4"> <button class="btn btn-primary" onclick="notificar()">Reservar</button> </div>
+            <div class="col-4" style="margin-top: 15px;"> <h3> 14:30 </h3> </div> <div class="col-2"></div> <div class="col-4"> <button class="btn btn-primary" onclick="notificar()">Reservar</button> </div>
+            <div class="col-4" style="margin-top: 15px;"> <h3> 15:50 </h3> </div> <div class="col-2"></div> <div class="col-4"> <button class="btn btn-primary" onclick="notificar()">Reservar</button> </div>
+            <div class="col-4" style="margin-top: 15px;"> <h3> 17:10 </h3> </div> <div class="col-2"></div> <div class="col-4"> <button class="btn btn-primary" onclick="notificar()">Reservar</button> </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function notificar() {
+      alert("Tu hora ha sido reservada en el sistema!");
+    }
+    </script>
+
+{% endblock content %}

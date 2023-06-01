@@ -7,3 +7,6 @@ def homepage(request):
 
 def login(request):
     return render(request, 'core/login.html')
+
+def reserve(request):
+    return render(request, 'core/reserva.html')
